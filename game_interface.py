@@ -1,40 +1,30 @@
 ################################
 # interface for the Pet object
 # ----------
-# it's up to you to finish it and customize it! 
+# it's up to you to implement the logical flow
 ################################
 
 from pet import Pet                             # imports the Pet class from pet.py
 from helpers import menu                        # import menu 
- 
+
 
 print("-"*36)
 print("-- 🐶 Welcome to Pet Simulator 🐱 --")
 print("-"*36,"\n")
 
-print("🤔 What would you like to name your pet?")
-name = input(">>> ")
 
-my_pet = Pet()                                  #create the pet
-my_pet.set_name(name)
-
-print("-"*25)
-print(f"{my_pet.name} is ready!")
-print("-"*25)
+my_pet = Pet()                                  # creates the pet 
 
 game_play = True
 
+menu_options = ["Introduce", "Quit"]
+
 while game_play == True:
-    options = ["Introduce", "Quit"] #set the menu choices
 
-    option = menu("Menu",options)
+    chosen_option = menu("Menu",menu_options)
 
-    if option == 'Introduce':
+    if chosen_option == 'Introduce':
         my_pet.introduce()
 
-    elif option == 'Quit':
+    elif chosen_option == 'Quit':
         game_play = False
-
-print("-"*29)
-print("--- Leaving Pet Simulator ---")
-print("-"*29)
