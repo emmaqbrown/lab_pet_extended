@@ -9,6 +9,7 @@ packages = [{include = "lab_pet"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 inquirerpy = "^0.3.4"
+colorama = "^0.4.6"
 
 
 [build-system]
